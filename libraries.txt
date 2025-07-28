@@ -1,0 +1,22 @@
+# Space Weather Station - Required Libraries
+# For Wokwi Online Simulator
+# These libraries are typically pre-installed in Wokwi
+
+# Core Arduino Libraries (built-in)
+LiquidCrystal
+
+# DHT Sensor Library
+# Install via Library Manager: DHT sensor library by Adafruit
+DHT sensor library
+
+# Note: If you encounter any compilation issues, try these alternatives:
+# 1. SimpleDHT library (lightweight alternative)
+# 2. DHT22 library (specific for DHT22 sensors)
+
+# The following libraries are built into Arduino IDE and Wokwi:
+# - Wire.h (I2C communication)
+# - SPI.h (SPI communication) 
+# - Serial (UART communication)
+
+# Additional dependencies that may be automatically installed:
+# - Adafruit Unified Sensor (dependency for DHT library)
