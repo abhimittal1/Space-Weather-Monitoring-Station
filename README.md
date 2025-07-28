@@ -59,7 +59,7 @@ The Space Weather Monitoring Station is an advanced environmental monitoring sys
 
 The following diagram shows the complete hardware implementation with all component connections:
 
-![Circuit Diagram](images/space_weather_circuit.png)
+![Circuit Diagram](IOT_diagram.png)
 
 *Figure 1: Complete circuit schematic showing Arduino UNO connections to DHT22 sensor, LCD display, status LEDs, buzzer, and potentiometer*
 
@@ -195,7 +195,7 @@ switch (displayMode % 3) {
 
 The system demonstrates real-time environmental monitoring with comprehensive data output:
 
-![System Results](images/space_weather_results.png)
+![System Results](IOT_result.png)
 
 *Figure 2: Serial monitor output showing telemetry data, LCD display modes, and system status indicators*
 
