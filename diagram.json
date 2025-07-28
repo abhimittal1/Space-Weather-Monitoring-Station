@@ -1,0 +1,133 @@
+{
+  "version": 1,
+  "author": "Space Weather Station",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-arduino-uno",
+      "id": "uno",
+      "top": 0,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-dht22",
+      "id": "dht1",
+      "top": -150,
+      "left": 200,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-lcd1602",
+      "id": "lcd1",
+      "top": -300,
+      "left": -100,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led_green",
+      "top": 100,
+      "left": 300,
+      "attrs": {
+        "color": "green"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led_red",
+      "top": 150,
+      "left": 300,
+      "attrs": {
+        "color": "red"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led_blue",
+      "top": 200,
+      "left": 300,
+      "attrs": {
+        "color": "blue"
+      }
+    },
+    {
+      "type": "wokwi-buzzer",
+      "id": "buzzer1",
+      "top": 250,
+      "left": 300,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "pot1",
+      "top": -50,
+      "left": 400,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 100,
+      "left": 220,
+      "attrs": {
+        "value": "220"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": 150,
+      "left": 220,
+      "attrs": {
+        "value": "220"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r3",
+      "top": 200,
+      "left": 220,
+      "attrs": {
+        "value": "220"
+      }
+    }
+  ],
+  "connections": [
+    ["uno:2", "dht1:SDA", "green", []],
+    ["uno:5V", "dht1:VCC", "red", []],
+    ["uno:GND", "dht1:GND", "black", []],
+    
+    ["uno:12", "lcd1:RS", "blue", []],
+    ["uno:13", "lcd1:E", "purple", []],
+    ["uno:4", "lcd1:D4", "yellow", []],
+    ["uno:5", "lcd1:D5", "orange", []],
+    ["uno:6", "lcd1:D6", "brown", []],
+    ["uno:7", "lcd1:D7", "gray", []],
+    ["uno:5V", "lcd1:VCC", "red", []],
+    ["uno:GND", "lcd1:GND", "black", []],
+    ["uno:GND", "lcd1:RW", "black", []],
+    ["uno:5V", "lcd1:A", "red", []],
+    ["uno:GND", "lcd1:K", "black", []],
+    
+    ["uno:8", "r1:1", "green", []],
+    ["r1:2", "led_green:A", "green", []],
+    ["led_green:C", "uno:GND", "black", []],
+    
+    ["uno:9", "r2:1", "red", []],
+    ["r2:2", "led_red:A", "red", []],
+    ["led_red:C", "uno:GND", "black", []],
+    
+    ["uno:10", "r3:1", "blue", []],
+    ["r3:2", "led_blue:A", "blue", []],
+    ["led_blue:C", "uno:GND", "black", []],
+    
+    ["uno:11", "buzzer1:1", "white", []],
+    ["buzzer1:2", "uno:GND", "black", []],
+    
+    ["uno:A0", "pot1:SIG", "yellow", []],
+    ["pot1:VCC", "uno:5V", "red", []],
+    ["pot1:GND", "uno:GND", "black", []]
+  ],
+  "dependencies": {}
+}
